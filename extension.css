@@ -219,3 +219,54 @@ color:#bbb !important
 html[data-theme="brown"] #sidebar .form-group .form-control.sidebar-search{
 color: #fff!important;
 }
+
+.btn,
+.subnav-item,
+.state,
+.btn-sm,
+.hx_reponav a.reponav-item,
+.social-count,
+.Header-link,
+.dropdown-item,
+.select-menu-item {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 1px 1px rgba(0, 0, 0, .12) !important;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 0;
+	transition: .2s ease-in;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+}
+
+.btn:after,
+.icons-container:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, #888 10%, transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10, 10);
+	opacity: 0;
+	transition: transform .5s, opacity 1s;
+}
+
+.btn-primary:after,
+.btn-success:after,
+.btn-warning:after {
+	background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.btn:active:after,
+.icons-container:after {
+	transform: scale(0, 0);
+	opacity: .3;
+	transition: 0s;
+}
