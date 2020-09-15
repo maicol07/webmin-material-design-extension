@@ -270,3 +270,31 @@ color: #fff!important;
 	opacity: .3;
 	transition: 0s;
 }
+
+/* Fix btn groups */
+.btn-group .btn:not(.btn-round), button.btn:not(.btn-round) {
+	border-radius: 0 !important;
+}
+
+.btn-group > *:first-child:not(:last-child):not(.dropdown-toggle):not(:visible) + .btn-group > *:last-child:not(:first-child):not(.dropdown-toggle) {
+	border-radius: 0.325em !important;
+}
+
+.btn-group > *:first-child:not(:last-child):not(.dropdown-toggle) {
+	border-top-left-radius: 0.325em !important;
+	border-bottom-left-radius: 0.325em !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+.btn-group > *:last-child:not(:first-child):not(.dropdown-toggle) {
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 0.325em !important;
+	border-bottom-right-radius: 0.325em !important;
+}
+
+/* Fix text color on file manager */
+.file-manager .container-fluid .btn-group.pull-right button.btn-inverse {
+	color: unset !important;
+}
