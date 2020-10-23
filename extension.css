@@ -267,7 +267,7 @@ color: #fff!important;
 }
 
 .btn:active:after,
-.icons-container:after {
+.icons-container:active:after {
 	transform: scale(0, 0);
 	opacity: .3;
 	transition: 0s;
